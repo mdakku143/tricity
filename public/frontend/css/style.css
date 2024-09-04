@@ -1,0 +1,2728 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+html,
+body {
+  font-family: Noto Sans, Regular;
+  line-height: 1;
+  font-size: 100%;
+  background: #EFEFEF;
+  font: Noto Sans;
+  vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+a {
+  text-decoration: none;
+  color: #1A1A1A
+}
+
+.topRow {
+  width: 100%;
+  background: #fff;
+  min-height: 60px;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto
+}
+
+.auto {
+  margin: 0 auto
+}
+
+.row {
+  width: 100%
+}
+
+.topStrip {
+  width: 100%;
+  box-shadow: 0 3px 10px #dedede;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  padding: 0 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF 0 0 no-repeat padding-box;
+  z-index: 99;
+}
+
+.logo {
+  width: 262px;
+  height: 60px;
+  background: url('../images/icon/logo.jpg') 50px no-repeat;
+  display: block;
+  background-size: 21%;
+  text-indent: -9999px
+}
+
+.topStrip nav {
+  max-width: 100%;
+  background: #fff;
+  padding: 0 0px 0 0;
+  position: relative
+}
+
+.topStrip nav ul.desktop,
+.topStrip nav ul.mobile {
+  display: flex;
+  max-height: 24px;
+  display: flex;
+  justify-content: space-between
+}
+
+.topStrip nav ul.desktop li,
+.topStrip nav ul.mobile li {
+  opacity: 1;
+  margin-left: 52px;
+  white-space: nowrap
+}
+
+.topStrip nav ul.desktop li:first-child,
+.topStrip nav ul.mobile li:first-child {
+  margin-left: 0
+}
+
+.topStrip nav ul.desktop li a {
+  display: flex;
+  align-items: center;
+  font: 500 18px/24px Noto Sans;
+  color: #1A1A1A
+}
+
+.topStrip nav ul.desktop li i {
+  display: inline-block;
+  height: 26px;
+  border-bottom: 3px solid #fff;
+  margin-right: 5px
+}
+
+.topStrip nav ul.desktop li.active i,
+.topStrip nav ul li:hover i {
+  border-bottom: 3px solid #ff5400
+}
+
+.topStrip nav ul.desktop li.home i {
+  background: url(https://static.tricitytoday.com/images/ic_homepage_header_home.svg) no-repeat -4px -1px;
+  width: 20px
+}
+
+.topStrip nav ul.desktop li.trading i {
+  width: 24px;
+  background: url(https://static.tricitytoday.com/images/ic_homepage_header_trending.svg) no-repeat -2px 0
+}
+
+.topStrip nav ul.desktop li.search i {
+  width: 22px;
+  background: url(https://static.tricitytoday.com/images/ic_homepage_header_search.svg) no-repeat -2PX 0
+}
+
+.topStrip nav ul.desktop li.app i {
+  width: 20px;
+  background: url(https://static.tricitytoday.com/images/ic_homepage_header_epaper.svg) no-repeat -3px 1px
+}
+
+.topStrip nav ul.mobile {
+  display: none
+}
+
+.topStrip nav ul.desktop li.onlyMobile {
+  display: none
+}
+
+.searchBox {
+  position: absolute;
+  display: none;
+  right: 0;
+  border-radius: 0 0 6px 5px;
+  background: #fff;
+  padding: 10px;
+  width: 260px;
+  top: 60px;
+  box-shadow: 0 8px 8px #afa9a9;
+  z-index: 999
+}
+
+.closeicon {
+  position: absolute;
+  top: 35px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  z-index: 9999;
+  outline: none;
+  background: #AFAFAF;
+  border-radius: 50px
+}
+
+.closeicon:before,
+.closeicon:after {
+  position: absolute;
+  left: 12px;
+  content: ' ';
+  height: 14px;
+  width: 1px;
+  top: 5px;
+  background-color: #ffff
+}
+
+.closeicon:before {
+  transform: rotate(45deg)
+}
+
+.closeicon:after {
+  transform: rotate(-45deg)
+}
+
+#hamburgerMenu .closeicon {
+  right: 27px
+}
+
+#searchBar .closeicon {
+  right: 58px;
+  background: #fff;
+  border-radius: 4px 4px 0 0
+}
+
+.searchBox.show {
+  display: block
+}
+
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%
+}
+
+.form-control {
+  font-size: .875em;
+  padding: 10px;
+  border: 1px solid #efefef;
+  background-color: #fff;
+  width: 100%;
+  outline: none
+}
+
+.btn {
+  width: 50px;
+  outline: none;
+  height: 38px;
+  background: url(https://static.tricitytoday.com/images/search.png) no-repeat center center #a61e35;
+  background-size: 30%;
+  border: 0;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0
+}
+
+.footer {
+  display: none;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #FFF;
+  box-shadow: 0 1px 18px;
+  border-radius: 31px 31px 0 0;
+  position: fixed;
+  bottom: 0;
+  align-items: center
+}
+
+.insideContainer,
+.middleAds,
+.middleContainer {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto
+}
+
+.middleContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38px
+}
+
+.middleAds {
+  margin-top: 28px;
+}
+
+.middleAds .ads {
+  max-width: 1153px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.middleAds .ads.TopAds {
+  min-height: 260px;
+}
+
+.articlepage .topRow,
+.stickyheader .topRow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.stickyheader .container {
+  padding-top: 54px;
+}
+
+.lhsTbl {
+  width: 20%;
+  top: 0;
+}
+
+.lhsTbl ul.navigation li {
+  position: relative;
+  width: 100%;
+}
+
+.lhsTbl ul.navigation li a {
+  display: block;
+  padding: 2px 0 2px 55px;
+  color: #6E6E6E;
+  font: bold 17px/38px Noto Sans
+}
+
+.lhsTbl ul.navigation li.active a {
+  color: #1A1A1A
+}
+
+.lhsTbl ul.navigation li.active,
+.lhsTbl ul.navigation li:hover {
+  background: #fff
+}
+
+/*
+.lhsTbl ul.navigation li:before{width:4px;height:56px;background:#EFEFEF;opacity:0;content:"";position:absolute;top:0;left:0}
+.lhsTbl ul.navigation li.active:before,.lhsTbl ul.navigation li:hover:before{background:#de372b;opacity:1}
+.lhsTbl ul.navigation li i:after{width:7px;height:7px;border-radius:50%;content:"";position:absolute;top:7px;left:7px;background:#717171}
+.lhsTbl ul.navigation li.active i:after,.lhsTbl ul.navigation li:hover i:after{background:#de372b}
+*/
+.lhsTbl ul.navigation li:hover {
+  background-color: #fff;
+  width: 100%
+}
+
+.lhsTbl ul.navigation li i {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: block;
+  float: left;
+  left: 16px;
+  top: 8px;
+}
+
+.lhsTbl ul.navigation li.active i {
+  background: #f9f4f4;
+  border: 1px solid #eceaea
+}
+
+.lhsTbl ul.navigation li:hover i {
+  background: #f9f4f4
+}
+
+.lhsTbl ul.navigation li.ic_topnew i {
+  background: url(https://static.tricitytoday.com/images/ic_topnews.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_greaternoidawest i {
+  background: url(https://static.tricitytoday.com/images/ic_greaternoidawest.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_noida i {
+  background: url(https://static.tricitytoday.com/images/ic_noida.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_upchunav i {
+  background: url(https://static.tricitytoday.com/images/Tricity-UP_icon_300x300-02.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_faridabad i {
+  background: url(https://static.tricitytoday.com/images/faridabad.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_chandigarh i {
+  background: url(https://static.tricitytoday.com/images/chandigarh.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_gurgaon i {
+  background: url(https://static.tricitytoday.com/images/gurgaon.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_greater_noida i {
+  background: url(https://static.tricitytoday.com/images/ic_greater_noida.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_yaumnacity i {
+  background: url(https://static.tricitytoday.com/images/ic_yaumnacity.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_gazhiabad i {
+  background: url(https://static.tricitytoday.com/images/ic_gazhiabad.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_delhi i {
+  background: url(https://static.tricitytoday.com/images/ic_delhi.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_hapur i {
+  background: url(https://static.tricitytoday.com/images/Hapur_icon.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_UP i {
+  background: url(https://static.tricitytoday.com/images/ic_UP.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_mg i {
+  background: url(https://static.tricitytoday.com/images/ic_mg.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_auto i {
+  background: url(https://static.tricitytoday.com/images/Car-Icon.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_jevar i {
+  background: url(https://static.tricitytoday.com/images/ic_jevar.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_film i {
+  background: url(https://static.tricitytoday.com/images/ic_film_city.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_dharmkarm i {
+  background: url(https://static.tricitytoday.com/images/ic_dharmkarm.svg) no-repeat 0px 0px
+}
+
+.lhsTbl ul.navigation li.ic_news i {
+  background: url(https://static.tricitytoday.com/images/ic_news.svg) no-repeat 0px 0px
+}
+
+
+.lhsSocial {
+  max-width: 100%;
+  text-align: center;
+  font: normal 14px/24px Noto Sans;
+  letter-spacing: 0;
+  color: #6E6E6E;
+  opacity: 1;
+  margin-top: 22px
+}
+
+.lhsSocial ul {
+  display: flex;
+  max-height: 32px;
+  justify-content: space-between;
+  margin: 16px 0 24px
+}
+
+.lhsSocial ul li {
+  opacity: 1
+}
+
+.lhsSocial ul li a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px
+}
+
+.lhsSocial ul li a.fb {
+  background: url(https://static.tricitytoday.com/images/ic_social_epaper_facebook.png) no-repeat 0 0;
+  background-size: 100%
+}
+
+.lhsSocial ul li a.twitter {
+  background: url(https://static.tricitytoday.com/images/ic_social_epaper_twitter.png) no-repeat 0 0;
+  background-size: 100%
+}
+
+.lhsSocial ul li a.photo {
+  background: url(https://static.tricitytoday.com/images/ic_social_epaper_instagram.png) no-repeat 0 -1px;
+  background-size: 100%
+}
+
+.lhsSocial ul li a.youtube {
+  background: url(https://static.tricitytoday.com/images/ic_social_epaper_youtube.png) no-repeat 0 0;
+  background-size: 100%
+}
+
+.middleText {
+  max-width: 648px;
+  width: 50%;
+  top: 0;
+}
+
+.middleText .bigStory {
+  background: #fff;
+  border-radius: 4px;
+  opacity: 1;
+  text-align: left;
+  padding: 22px 16px 16px;
+  position: relative;
+}
+
+.middleText .bigStory:before {
+  border-top: 4px solid #FF9300;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute
+}
+
+.middleText .ribbon {
+  display: block;
+  min-width: 190px;
+  text-transform: capitalize;
+  line-height: 32px;
+  text-align: center;
+  background: transparent linear-gradient(251deg, #E93F33 0%, #CC2A1E 100%) 0 0 no-repeat;
+  position: absolute;
+  top: -15px;
+  z-index: 9;
+  left: -10px;
+  font: bold 16px/32px Noto Sans;
+  color: #fff
+}
+
+.middleText .ribbon:before {
+  height: 0;
+  width: 0;
+  bottom: -10px;
+  left: 0;
+  border-top: 10px solid #742C21;
+  border-left: 10px solid transparent;
+  content: "";
+  position: absolute
+}
+
+.middleText .ribbon:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 16px 6px;
+  border-style: solid;
+  border-color: #e53c30 #e53c30 #e53c30 transparent;
+  position: absolute;
+  right: -10px;
+  transform: rotate(180deg)
+}
+
+.middleText .stroyheading {
+  width: 116px;
+  color: #fff;
+  height: 32px;
+  background: transparent linear-gradient(251deg, #E93F33 0%, #CC2A1E 100%) 0 0 no-repeat padding-box;
+  opacity: 1
+}
+
+.middleText .bigStory h1,
+.middleText .bigStory h3 {
+  text-align: left;
+  font: normal 600 20px/32px Noto Sans;
+  letter-spacing: 0;
+  color: #1A1A1A;
+  opacity: 1
+}
+
+.middleText .bigStory h1 a {
+  color: #1A1A1A;
+}
+
+.middleText .bigStory h1 a span {
+  color: #FB9716
+}
+
+.middleText .bigStory h1 a span.color1 {
+  color: #FB9716
+}
+
+.middleText .bigStory h1 a span.color2 {
+  color: #3873AF
+}
+
+.middleText .bigStory h1 a span.color3 {
+  color: #E7B9A2
+}
+
+.middleText .bigStory h1 a span.color4 {
+  color: #9DC09E
+}
+
+.lftAds {
+  width: 100%;
+  margin: 16px 0 0
+}
+
+.lftAds img {
+  width: 100%
+}
+
+.middleText .imgSize {
+  width: 100%;
+  max-height: 400px;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bigStory figcaption {
+  background: #fff;
+  border-radius: 4px;
+  backdrop-filter: blur(2px);
+  font: 0.87em/1.5em Noto Sans;
+  color: #171918;
+  padding: 2px 10px;
+  position: absolute;
+  right: 16px;
+  top: 16px
+}
+
+.bigStory .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.bigStory .content p {
+  font: normal 16px/24px Noto Sans;
+  color: #6E6E6E;
+  width: calc(100% - 146px)
+}
+
+.bigStory .content .faceBook {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background: url(https://static.tricitytoday.com/images/ic_homepage_anyaarticle_facebook.svg) no-repeat 0 0;
+  border-radius: 50%
+}
+
+.pgNavigation {
+  display: flex
+}
+
+.roundBox {
+  background: #FFF;
+  padding: 20px;
+  border-radius: 4px;
+  opacity: 1
+}
+
+.roundBox li img {
+  width: 140px;
+  height: 100px
+}
+
+.rhsTbl {
+  max-width: 320px;
+  width: 30%;
+  top: 0;
+}
+
+.rhsTbl .rhsAds {
+  margin: 16px 0 0;
+  width: 100%
+}
+
+.otherNews h3,
+.otherNews h1 {
+  padding: 3px 10px;
+  background: #101c41;
+  border-radius: 4px 4px 0 0;
+  font: normal 16px/30px Noto Sans;
+  letter-spacing: .8px;
+  position: absolute;
+  left: 50%;
+  top: -36px;
+  margin-left: -60px;
+  color: #fff;
+  text-align: center
+}
+
+.otherNews {
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px 16px 0 24px;
+  position: relative;
+  margin-top: 50px
+}
+
+.otherNews .list {
+  background: #fff;
+  border-radius: 4px;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between
+}
+
+.otherNews .list .lhs {
+  width: calc(100% - 140px)
+}
+
+.otherNews .list .lhs p {
+  text-align: left;
+  font: bold 18px/28px Noto Sans;
+  color: #1A1A1A;
+  padding-bottom: 14px
+}
+
+.otherNews .list .lhs p a {
+  color: #1A1A1A
+}
+
+.otherNews .list .rhs {
+  width: 100%;
+  max-width: 140px;
+  margin-left: 12px
+}
+
+.otherNews .list .rhs .img {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden
+}
+
+.otherNews .list:before {
+  width: 8px;
+  height: 16px;
+  background: #9DC09E;
+  content: " ";
+  position: absolute;
+  left: -24px;
+  top: 9px
+}
+
+.otherNews .list:nth-of-type(4n+1):before {
+  background: #9DC09E
+}
+
+.otherNews .list:nth-of-type(4n+1) .lhs p span {
+  color: #9DC09E
+}
+
+.otherNews .list:nth-of-type(4n+2):before {
+  background: #FB9716
+}
+
+.otherNews .list:nth-of-type(4n+2) .lhs p span {
+  color: #FB9716
+}
+
+.otherNews .list:nth-of-type(4n+3):before {
+  background: #3873AF
+}
+
+.otherNews .list:nth-of-type(4n+3) .lhs p span {
+  color: #3873AF
+}
+
+.otherNews .list:nth-of-type(4n+4):before {
+  background: #E7B9A2
+}
+
+.otherNews .list:nth-of-type(4n+4) .lhs p span {
+  color: #E7B9A2
+}
+
+
+.socialicon {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0 16px;
+  width: 130px;
+}
+
+.articleWrap .socialicon {
+  width: inherit;
+}
+
+.otherNews .list:last-child {
+  border-bottom: 0
+}
+
+.socialicon a.fb,
+.socialicon a.twitter,
+.socialicon a.whatsup {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #FAFAFA;
+  text-indent: -9999px;
+  border-radius: 50%
+}
+
+.socialicon a.fb {
+  background: url(https://static.tricitytoday.com/images/ic_homepage_anyaarticle_facebook.svg) no-repeat 4px 1px
+}
+
+.socialicon a.twitter {
+  background: url(https://static.tricitytoday.com/images/ic_homepage_anyaarticle_twitter.svg) no-repeat 4px 1px
+}
+
+.socialicon a.whatsup {
+  background: url(https://static.tricitytoday.com/images/ic_homepage_anyaarticle_whatsapp.svg) no-repeat 4px 1px
+}
+
+.otherNews .location {
+  text-align: left;
+  display: inline-block;
+  font: normal 1em/1.5em Noto Sans;
+  color: #6E6E6E;
+}
+
+.otherNews .location a {
+  color: #6E6E6E
+}
+
+.otherNews .location a:hover {
+  text-decoration: underline
+}
+
+.rthNav {
+  text-align: left;
+  letter-spacing: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  padding: 0 10px
+}
+
+.rthNav li {
+  position: relative;
+  margin: 0 0 0 5px;
+  font: 14px/24px Noto Sans;
+  color: #1A1A1A;
+  padding: 0 5px 0 0
+}
+
+.rthNav li:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  height: 11px;
+  background: #1A1A1A;
+  right: 0
+}
+
+.rthNav li:last-child:after {
+  width: 0
+}
+
+.rthNav li a {
+  color: #1A1A1A
+}
+
+.rthNav li a:hover {
+  color: #1A1A1A;
+  text-decoration: underline
+}
+
+.copy {
+  text-align: left;
+  font: normal 14px/24px Noto Sans;
+  letter-spacing: 0;
+  color: #6E6E6E;
+  margin-top: 24px;
+  padding: 0 10px;
+  margin-bottom: 16px
+}
+
+.articleWrap {
+  background: #fff;
+  border-radius: 4px;
+  opacity: 1;
+  width: 100%;
+  padding: 16px
+}
+
+.breadcrumb {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #6E6E6E
+}
+
+.breadcrumb li {
+  color: #1F1F1F;
+  font-size: 12px;
+  padding: 0 16px 0 0;
+  font-size: .75em;
+  line-height: 22px;
+  font-family: Noto Sans;
+  position: relative
+}
+
+.breadcrumb li:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 6px;
+  border: solid #6E6E6E;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(-45deg)
+}
+
+.breadcrumb li:last-child:after {
+  border: 0
+}
+
+.breadcrumb li a {
+  color: #6E6E6E
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline
+}
+
+.title {
+  font-size: 1.25em;
+  line-height: 32px;
+  color: #1A1A1A;
+  margin-bottom: 16px;
+  font-family: Noto Sans
+}
+
+.title span {
+  color: #FB9716
+}
+
+.title span.color1 {
+  color: #FB9716
+}
+
+.title span.color2 {
+  color: #3873AF
+}
+
+.title span.color3 {
+  color: #E7B9A2
+}
+
+.title span.color4 {
+  color: #9DC09E
+}
+
+.articleWrap .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.timestamp {
+  width: 100%;
+  font-size: .87em;
+  line-height: 1.5em;
+  color: #004EDF;
+  font-family: Noto Sans, Regular
+}
+
+.timestamp a {
+  display: inline-block;
+  padding: 0 15px 0 0;
+  position: relative;
+  color: #606060
+}
+
+.timestamp a:first-child {
+  color: #1A1A1A
+}
+
+.timestamp a:after {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  content: "";
+  background: #6E6E6E;
+  width: 1px;
+  height: 12px
+}
+
+.articleWrap .imgSize {
+  width: 100%;
+  margin: 11px 0 0;
+  overflow: hidden
+}
+
+.articleWrap .socialicon {
+  margin: 0;
+  padding: 0
+}
+
+.articleWrap .articleTxt {
+  font-size: 1.12em;
+  line-height: 2em;
+  font-family: Noto Sans
+}
+
+.articleWrap .articleTxt .intro {
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #6E6E6E
+}
+
+.articleWrap .articleTxt p {
+  padding: 10px 0
+}
+
+.articleWrap .articleTxt a {
+  color: ##004EDF
+}
+
+.googlenewsIcon span {
+  font-size: 10px;
+  text-align: center;
+  display: block;
+}
+
+.googlenewsIcon img {
+  width: 100px;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+.articlePopup,
+#overlay {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1A1A1A;
+  z-index: 98
+}
+
+#overlay {
+  display: none;
+}
+
+.articlePopup {
+  visibility: hidden;
+}
+
+.articlePopup .popupMiddle {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px 10px
+}
+
+.articlePopup .popupMiddle img {
+  max-width: 100%
+}
+
+.articlePopup p {
+  font: normal 1.12em/1.5em Noto Sans;
+  color: #fff;
+  margin-top: 16px
+}
+
+.articlePopup .goBack,
+.articlePopup .close {
+  position: absolute;
+  top: 24px;
+  display: block;
+  text-indent: -99999px;
+  background-color: #1a1a1a;
+}
+
+.articlePopup .goBack {
+  background: url(https://static.tricitytoday.com/images/ic_mobile_imageview_back.svg) no-repeat;
+  left: 20px;
+  width: 26px;
+  height: 16px;
+}
+
+.articlePopup .close {
+  top: 24px;
+  position: absolute;
+  background: url(https://static.tricitytoday.com/images/ic_mobile_imageview_cross.svg) no-repeat;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.articlePopup .whatsup {
+  margin-top: 80px;
+  font: normal 1.12em/1.55em Noto Sans;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.articlePopup .whatsup i {
+  background: url(https://static.tricitytoday.com/images/ic_mobile_imageview_whatsapp.svg) no-repeat 0 0;
+  width: 29px;
+  height: 26px;
+  display: inline-block;
+  margin-right: 10px
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 60px;
+  height: calc(100% - 60px)
+}
+
+#overlay.show {
+  display: block
+}
+
+/**/
+.articlePopup .bx-wrapper {
+  position: relative;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y
+}
+
+.articlePopup .bx-wrapper img {
+  max-width: 100%;
+  display: block
+}
+
+.articlePopup ul.bxslider {
+  list-style: none
+}
+
+.articlePopup .bx-viewport {
+  -webkit-transform: translatez(0)
+}
+
+.articlePopup .bx-wrapper .bx-pager,
+.articlePopup .bx-wrapper .bx-controls-auto {
+  display: none
+}
+
+.bx-wrapper .bx-next {
+  right: 10px;
+}
+
+.articlePopup .bx-wrapper .bx-prev {
+  left: 0px;
+  position: relative
+}
+
+.articlePopup .bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 0
+}
+
+.articlePopup .bx-wrapper .bx-next {
+  right: 0px;
+  position: relative
+}
+
+.articlePopup .bx-wrapper .bx-next:hover,
+.articlePopup .bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.articlePopup .bx-wrapper .bx-controls-direction a.disabled {
+  display: none
+}
+
+.articlePopup .bx-wrapper .bx-next:after,
+.articlePopup .bx-wrapper .bx-prev:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 11px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+}
+
+.articlePopup .bx-wrapper .bx-prev:after {
+  transform: rotate(-220deg);
+}
+
+
+.author {
+  width: 100%
+}
+
+.authFlex {
+  display: flex;
+  justify-content: space-between
+}
+
+.author_picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.author_picture img {
+  max-width: 100%;
+  height: 100%
+}
+
+.author_detail {
+  width: calc(100% - 115px);
+  color: #1A1A1A
+}
+
+.author_detail P {
+  width: calc(100% - 115px);
+  color: #1F1F1F;
+  line-height: 1.5em;
+  font-family: Noto Sans;
+  font-size: .92em
+}
+
+.author_detail h4 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  font-family: Noto Sans;
+  color: #1A1A1A
+}
+
+.author_detail span {
+  color: #6E6E6E
+}
+
+.author .authorTxt {
+  margin-top: 10px;
+  font-size: 1.12em;
+  line-height: 2em;
+  font-family: Noto Sans
+}
+
+.author .authorTxt a {
+  color: #004EDF
+}
+
+.author .lhsSocial {
+  width: 160px;
+  margin: 5px auto 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.author .lhsSocial ul {
+  margin: 4px 0 4px 0
+}
+
+.author .lhsSocial ul li a {
+  width: 28px;
+  height: 28px;
+}
+
+.author a {
+  color: #004EDF
+}
+
+.static-data {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  max-width: 648px;
+  padding: 16px;
+  text-align: left;
+  font: 1em/1.7em Noto Sans;
+  color: #1A1A1A
+}
+
+.static-data h1 {
+  text-align: left;
+  margin-bottom: 5px;
+  font: bold 1.5em/1.5em Noto Sans;
+  color: #1A1A1A;
+  padding-bottom: 2px
+}
+
+.articleWrap.factPage h1 {
+  position: relative
+}
+
+.articleWrap.factPage h1 span {
+  color: #0DA335
+}
+
+.articleWrap.factPage h1:before {
+  background: #0DA335;
+  width: 8px;
+  height: 24px;
+  background: #0DA335;
+  content: " ";
+  position: absolute;
+  left: -16px;
+  top: 7px
+}
+
+.articleWrap.factPage.fact10 h1:before {
+  background: #FB9716
+}
+
+.articleWrap.factPage.fact10 h1 span {
+  color: #FB9716
+}
+
+.articleWrap .articleTxt iframe {
+  width: 100%;
+}
+
+.articleWrap.factPage .factTxt {
+  font-size: 1.12em;
+  line-height: 2em;
+  font-family: Noto Sans
+}
+
+.articleWrap.factPage .factTxt .intro {
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #6E6E6E
+}
+
+.articleWrap.factPage .factTxt h4 {
+  text-align: left;
+  font: 600 18px/32px Noto Sans;
+  letter-spacing: 0;
+  color: #1A1A1A
+}
+
+.articleWrap.factPage .factTxt ul.dotted {
+  margin: 0 0 0 20px
+}
+
+.articleWrap.factPage .factTxt ul.dotted li {
+  list-style: disc
+}
+
+.articleWrap.factPage .factTxt p {
+  padding: 10px 0
+}
+
+.articleWrap.factPage .factTxt a {
+  color: ##004EDF
+}
+
+.otherNews.factPage h3 {
+  width: auto;
+  padding: 0 10px;
+  transform: translate(-50%, 0%);
+  margin-left: auto
+}
+
+.articleWrap.factPage .factTxt ol {
+  margin: 15px 0 0 30px;
+  counter-reset: item
+}
+
+.articleWrap.factPage .factTxt ol li {
+  position: relative;
+  padding: 12px;
+  text-align: left;
+  font: normal 18px/32px Noto Sans;
+  counter-increment: item;
+  letter-spacing: 0;
+  color: #1A1A1A;
+  background: #FFF;
+  border-radius: 4px;
+  margin-bottom: 22px;
+  border: 1px solid #707070
+}
+
+.articleWrap.factPage .factTxt ol li:before {
+  width: 24px;
+  height: 32px;
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 12px;
+  background: #004EDF;
+  color: #fff;
+  font: 600 18px/32px Noto Sans;
+  content: counter(item);
+  text-align: center
+}
+
+.shadowBox {
+  clear: both;
+  width: 100%
+}
+
+.shadowBox h5 {
+  text-align: left;
+  margin-bottom: 20px;
+  font: normal normal 600 18px/32px Noto Sans;
+  letter-spacing: 0;
+  color: #1A1A1A;
+  display: flex;
+  align-items: center;
+}
+
+.shadowBox h5 i {
+  background: url(https://static.tricitytoday.com/images/ic_live.svg) no-repeat 0 0px;
+  width: 80px;
+  height: 50px;
+  display: inline-block
+}
+
+.shadowBox h5 span {
+  display: none
+}
+
+.shadowBox i {
+  background: url(https://static.tricitytoday.com/images/ic_live.svg) no-repeat 0 0px;
+  width: 71px;
+  /*height: 20px;*/
+  display: inline-block;
+
+}
+
+.shadowBox .roundbox {
+  background: #FFF;
+  padding: 22px;
+  box-shadow: 0 3px 6px #EDEDED;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  opacity: 1
+}
+
+.shadowBox .roundbox:last-child {
+  margin-bottom: 5px
+}
+
+.shadowBox .roundbox h6 {
+  text-align: left;
+  font: 600 16px/28px Noto Sans;
+  letter-spacing: 0;
+  color: #1A1A1A
+}
+
+.articleWrap.factPage.live .flex {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0 0 14px;
+  margin-bottom: 12px
+}
+
+.articleWrap.factPage.live p {
+  color: #1A1A1A;
+  line-height: 28px
+}
+
+.articleWrap.factPage.live p:last-child {
+  padding-bottom: 0
+}
+
+.articleWrap.factPage.live .timestamp i {
+  width: 23px;
+  height: 24px;
+  float: left;
+  background: #f1f1f1;
+  margin: 0 5px 0 0;
+  border-radius: 12px;
+  background: url(https://static.tricitytoday.com/images/ic_calendar.svg) no-repeat 0 0px;
+  background-size: 100%
+}
+
+.articleWrap.factPage.live .timestamp {
+  color: #6E6E6E
+}
+
+/*video*/
+.articleWrap.factPage.video .socialicon {
+  width: 350px
+}
+
+.articleWrap.factPage.video h1 {
+  position: relative
+}
+
+.articleWrap.factPage.video h1 span {
+  color: #E63D31
+}
+
+.articleWrapf.actPage.video h1:before {
+  width: 8px;
+  height: 24px;
+  background: #E63D31;
+  content: " ";
+  position: absolute;
+  left: -16px;
+  top: 7px
+}
+
+.videoicon {
+  background: rgba(0, 0, 0, .6);
+  border: 2px solid #fff;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -24px;
+  border-radius: 50%;
+  cursor: pointer
+}
+
+.videoicon i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 16px solid #fff;
+  position: relative;
+  transition: all .3s;
+  border-radius: 2px;
+  margin-left: 2px
+}
+
+.socialicon a.video {
+  background: #D1D1D1;
+  border: 1px solid #292FE2;
+  text-align: left;
+  font: 600 14px/24px Noto Sans;
+  letter-spacing: 0;
+  color: #004EDF;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+  border-radius: 12px;
+  padding: 0 8px;
+  color: #004EDF
+}
+
+.socialicon a.video i {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 9px solid #004EDF;
+  position: relative;
+  transition: all .3s;
+  border-radius: 2px;
+  margin: 5px 6px 0 0;
+  float: left
+}
+
+/*video*/
+.videoMobile {
+  background: #000;
+}
+
+.videoPage {
+  padding: 16px
+}
+
+.videoMobile .back {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.videoMobile .back a {
+  color: #D1D1D1
+}
+
+.videoMobile .back a.backgo {
+  display: inline-block;
+  position: relative;
+  padding: 0 13px;
+}
+
+.videoMobile .back a.backgo:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 2px solid red;
+  border-bottom: 2px solid red;
+  position: absolute
+}
+
+.videoMobile .back a.backgo:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #D1D1D1;
+  border-bottom: 2px solid #D1D1D1;
+  position: absolute;
+  left: 0;
+  transform: rotate(45deg);
+  top: 4px;
+}
+
+.videoPlay {
+  margin-top: 25px;
+}
+
+.end-record-info {
+  margin-bottom: 20px;
+  text-align: center;
+  height: 40px;
+}
+
+.sluginfo {
+  font-size: 1.12em;
+  line-height: 28px;
+  color: #6E6E6E;
+  font-family: Noto Sans;
+}
+
+.videoPage h1 {
+  text-align: left;
+  font: normal 1.25em/1.5em Noto Sans;
+  color: #FFFFFF;
+  margin: 14px 0 0 0;
+}
+
+.videoPage h1 span {
+  color: #004EDF
+}
+
+.onlyMobile .lhsSocial {
+  margin-top: 10px
+}
+
+/*advertise page*/
+.advertiseflex {
+  display: flex;
+  justify-content: space-between
+}
+
+.advertiseText {
+  max-width: 96%;
+  width: 100%;
+  margin: 0 auto
+}
+
+.advertiseText h1,
+.termText h1 {
+  text-align: center;
+  font: bold 30px/32px Noto Sans;
+  color: #1A1A1A;
+  padding: 30px 0
+}
+
+.advertiseBox {
+  width: 28%;
+  margin-top: 20px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px
+}
+
+.advertiseText .ribbon,
+.hightlight .ribbon {
+  display: block;
+  width: 155px;
+  line-height: 32px;
+  text-align: center;
+  background: transparent linear-gradient(251deg, #E93F33 0%, #CC2A1E 100%) 0 0 no-repeat;
+  position: absolute;
+  top: -15px;
+  z-index: 9;
+  left: -10px;
+  font: bold 16px/32px Noto Sans;
+  color: #fff
+}
+
+.advertiseText .ribbon:before,
+.hightlight .ribbon:before {
+  height: 0;
+  width: 0;
+  bottom: -10px;
+  left: 0;
+  border-top: 10px solid #742C21;
+  border-left: 10px solid transparent;
+  content: "";
+  position: absolute
+}
+
+.advertiseText .advertiseBox:before,
+.hightlight:before {
+  border-top: 4px solid #FF9300;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute
+}
+
+.advertiseText .ribbon:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 16px 6px;
+  border-style: solid;
+  border-color: #e53c30 #e53c30 #e53c30 transparent;
+  position: absolute;
+  right: -10px;
+  transform: rotate(180deg)
+}
+
+.advertiseBox .content {
+  clear: both;
+  width: 100%;
+  margin: 10px 0;
+  padding: 55px 20px;
+  font-family: Noto Sans;
+  color: #000
+}
+
+.advertiseBox .content h4 {
+  font-size: 22px;
+  margin: 0 0 10px
+}
+
+.advertiseBox .content p {
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 18px
+}
+
+.advertiseBox .content p a {
+  font-size: 16px;
+  color: #004EDF
+}
+
+.hightlight {
+  position: relative;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-radius: 4px;
+  margin-top: 25px;
+  float: left;
+  width: 100%;
+  max-width: 52%;
+  margin: 25px 15px 10px 0;
+}
+
+.hightlight ul {
+  padding: 20px 0 0 0
+}
+
+.hightlight li {
+  border-bottom: 1px solid #ddd;
+  padding: 4px 15px;
+  font: bold 20px/32px Noto Sans;
+  color: #1A1A1A;
+}
+
+.hightlight li:last-child {
+  border-bottom: 0
+}
+
+/*advertise page*/
+/*termText page*/
+.termText {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0 20px 20px;
+  font: normal 22px/35px Noto Sans;
+  color: #1A1A1A
+}
+
+.termText p {
+  margin-bottom: 10px
+}
+
+.termText .beforebox {
+  position: relative;
+  padding: 0 10px 0 15px;
+  display: inline-block
+}
+
+.termText .beforebox:before {
+  height: 19px;
+  width: 6px;
+  top: 10px;
+  left: 0;
+  content: "";
+  position: absolute;
+  background: #CC2A1E
+}
+
+.advertiseText.contact {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto
+}
+
+.advertiseText.contact .advertiseBox {
+  width: 45%
+}
+
+.advertiseText.contact .advertiseBox .content {
+  padding: 20px 20px 0
+}
+
+.fter {
+  background: #fff
+}
+
+.fter .link {
+  text-align: center;
+  margin-top: 32px;
+  padding: 20px 10px 0
+}
+
+.fter .link li {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 5px;
+  font: 14px/24px Noto Sans;
+  color: #1A1A1A;
+  padfterding: 0 5px 0 0
+}
+
+.fter .link li a {
+  color: #1A1A1A
+}
+
+.fter .copy {
+  text-align: center;
+  margin: 0;
+  padding: 10px
+}
+
+.TagsList {}
+
+.TagsList li {
+  display: inline-block;
+  margin: 0 15px 0 0px;
+}
+
+.TagsList li a {
+  padding: 2px 15px 1px;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  background: #efefef;
+  border-radius: 20px;
+  color: #657188 !important;
+  white-space: nowrap;
+}
+
+.MobileBannerAds {
+  display: none;
+}
+
+
+/*----Login PopUp CSS---*/
+.LoginPopOverlay {
+  background: #fafafa url(../images/tri-bg.png);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.LoginPopBox {
+  display: flex;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  width: 720px;
+  background: #fff;
+  box-shadow: 0px 0px 10px #eee;
+  border-radius: 5px;
+}
+
+.LoginPopBox .LoginLeft {
+  width: 40%;
+  padding: 20px;
+  background: #AE2237;
+  position: relative;
+  background: rgb(248, 156, 32);
+  background: linear-gradient(333deg, rgba(248, 156, 32, 1) 0%, rgba(174, 34, 55, 1) 63%, rgba(174, 34, 55, 1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoginPopBox .LoginLeft::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #da6c2e;
+  position: absolute;
+  right: -20px;
+}
+
+.loginHD {
+  font: normal 600 20px/32px Noto Sans;
+  color: #fff;
+}
+
+.userloginImg {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userloginImg img {
+  max-width: 60px;
+}
+
+.LoginPopBox .LoginRight {
+  width: 60%;
+  padding: 50px;
+}
+
+.loginButton {
+  transition: 0.3s;
+  overflow: hidden;
+  display: block;
+  border: solid 1px #F9A521;
+  box-shadow: 0px 0px 10px #e4e4e4;
+  color: #F9A521;
+  font-size: 14px;
+  padding: 15px 15px 15px 60px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background: #F9A521;
+  color: #fff;
+}
+
+.loginButton.Loginfbbtn {
+  border: solid 1px #1877F2;
+  color: #1877F2;
+}
+
+.loginButton.Loginfbbtn:hover {
+  background: #1877F2;
+  color: #fff;
+}
+
+.loginButton img {
+  width: 95px;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+}
+
+.orLine {
+  border-bottom: solid 1px #DBDBDB;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 5px;
+}
+
+.orLine span {
+  display: inline-block;
+  background: #fff;
+  color: #ACACAC;
+  padding: 20px;
+  border-radius: 100px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.Loginlabel {
+  font: normal 13px/32px Noto Sans;
+  color: #474747;
+}
+
+.Loginlabel span {
+  color: #f00;
+}
+
+.LoginInput {
+  border: solid 1px #DBDBDB;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px #e4e4e4;
+  color: #a8a8a8;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.SubmitInputBox {
+  text-align: center;
+}
+
+.SubmitInput {
+  transition: 0.3s;
+  background: #DBDBDB;
+  color: #47474773;
+  font: normal 16px/26px Noto Sans;
+  margin-top: 10px;
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.SubmitInput:hover {
+  color: #fff;
+  background: rgb(248, 156, 32);
+  background: linear-gradient(333deg, rgba(248, 156, 32, 1) 0%, rgba(174, 34, 55, 1) 63%, rgba(174, 34, 55, 1) 100%);
+}
+
+.topStrip .LogMenu a.LogoutMenu {
+  margin-top: -5px;
+  transition: 0.3s;
+  color: #fff;
+  background: rgb(248, 156, 32);
+  font: normal 16px/26px Noto Sans;
+  padding: 4px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: linear-gradient(333deg, rgba(248, 156, 32, 1) 0%, rgba(174, 34, 55, 1) 63%, rgba(174, 34, 55, 1) 100%);
+}
+
+.topStrip .LogMenu a.LogoutMenu img {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.phoneN {
+  padding-left: 70px;
+}
+
+.phonecont {
+  position: relative;
+}
+
+.phonecont span {
+  display: flex;
+  position: absolute;
+  color: #a8a8a8;
+  z-index: 1;
+  left: 12px;
+  top: 12px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.phonecont span img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.passwordForgot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.passwordForgot a {
+  color: #AE2237;
+  font-size: 12px;
+}
+
+.topGreadient {
+  height: 30px;
+  width: 100%;
+  background: #AE2237;
+  background: rgb(248, 156, 32);
+  background: linear-gradient(0deg, rgba(248, 156, 32, 1) 0%, rgba(174, 34, 55, 1) 63%, rgba(174, 34, 55, 1) 100%);
+}
+
+.myprofileCont {
+  padding: 20px 30px 10px 30px;
+}
+
+.myprofile {
+  display: block;
+}
+
+.width100 {
+  width: 100%;
+  border-radius: 0;
+}
+
+.MyProfileHD {
+  margin-bottom: 20px;
+  font: bold 16px/36px Noto Sans;
+  border-bottom: solid 1px #eee;
+}
+
+.PMenu {
+  position: relative;
+}
+
+.PMenu::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #AE2237;
+  position: absolute;
+  bottom: 1px;
+  right: -10px;
+}
+
+.PMenu img {
+  width: 28px;
+}
+
+.LoginMenu .home a {
+  display: flex;
+  line-height: 25px;
+}
+
+.LoginMenu .home i {
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  background: url(https://static.tricitytoday.com/images/ic_homepage_header_home.svg) no-repeat -4px -1px;
+  width: 20px
+}
+
+.ProfileMenu {
+  display: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 140px;
+  box-shadow: 0px 2px 6px #cecece;
+}
+
+.ProfileMenu li a {
+  padding: 5px 15px 5px 10px;
+  display: block;
+}
+
+.ProfileMenu li a img {
+  margin: 5px;
+  width: 15px;
+}
+
+.ProfileMenu li a.myprofile {
+  color: #fff;
+  background: #AE2237;
+  background: rgb(248, 156, 32);
+  background: linear-gradient(0deg, rgba(248, 156, 32, 1) 0%, rgba(174, 34, 55, 1) 63%, rgba(174, 34, 55, 1) 100%);
+}
+
+.topStrip .ProfileMenu li {
+  margin-left: 0;
+}
+
+/*----Login PopUp CSS---*/
+
+
+@media screen and (max-width:768px) {
+  .MobileBannerAds {
+    display: block;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .articleWrap .articleTxt iframe {
+    height: 250px;
+  }
+
+  .LoginPopBox {
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 50px;
+    transform: translate(0, 0px);
+    height: 100vh;
+  }
+
+  .LoginPopBox .LoginLeft,
+  .LoginPopBox .LoginRight {
+    width: 100%;
+  }
+
+  .LoginPopBox .LoginLeft::after {
+    bottom: -30px;
+    left: 50%;
+    transform: rotate(90deg);
+  }
+
+  .userloginImg {
+    margin-bottom: 0;
+  }
+
+
+
+
+}
+
+
+
+/**/
+@media all and (max-width:768px) and (min-width:320px) {
+
+  .lhsSocial {
+    margin: 10px 5px;
+  }
+
+  .topStrip {
+    max-height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .logo {
+    width: 229px;
+    height: 52px
+  }
+
+  .topStrip nav {
+    max-width: 100%;
+    background: #fff
+  }
+
+  .topStrip nav ul li {
+    margin-left: 6px
+  }
+
+  .topStrip nav ul li.active i,
+  .topStrip nav ul li:hover i {
+    border-bottom: 3px solid #fff
+  }
+
+  .topStrip nav ul.mobile {
+    display: flex
+  }
+
+  .topStrip nav ul.mobile li {
+    margin-left: 14px
+  }
+
+  .topStrip nav ul.mobile li span {
+    display: inline-block;
+    text-indent: -9999px
+  }
+
+  .topStrip nav ul.mobile li.menubar {
+    display: block
+  }
+
+  .topStrip nav ul.mobile li a {
+    display: flex;
+    align-items: center
+  }
+
+  .topStrip nav ul.mobile li i {
+    display: inline-block;
+    height: 26px;
+    border-bottom: 3px solid #fff;
+    margin-right: 5px
+  }
+
+  .topStrip nav ul li.menubar i {
+    width: 27px;
+    background: url(https://static.tricitytoday.com/images/ic_mobile_header_hamburger.svg) no-repeat 0 0
+  }
+
+  .topStrip nav ul li.search i {
+    width: 24px;
+    background: url(https://static.tricitytoday.com/images/ic_mobile_header_search.svg) no-repeat -5px -4px
+  }
+
+  .topStrip nav ul.desktop {
+    display: none;
+    max-height: initial;
+    position: absolute;
+    top: 37px;
+    right: -5px;
+    background: #fff;
+    border-radius: 6px 4px 6px 6px;
+    min-width: 260px;
+    max-width: 90%;
+    padding: 10px 10px 0;
+    z-index: 999
+  }
+
+  .LogMenu {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+  }
+
+  .topStrip nav ul.desktop.show {
+    display: block;
+    border: 1px solid #1A1A1A;
+    padding: 24px;
+  }
+
+  .topStrip nav ul.desktop li {
+    margin: 0;
+    white-space: inherit;
+  }
+
+  .topStrip nav ul.desktop li a {
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+    font-size: 14px
+  }
+
+  .topStrip nav ul.desktop li a i {
+    margin-right: 10px
+  }
+
+  .topStrip nav ul.desktop li.active i,
+  .topStrip nav ul li:hover i {
+    border-bottom: 3px solid #fff
+  }
+
+  .topStrip nav ul.desktop:before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 8px;
+    height: 0px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #fff;
+    z-index: 2
+  }
+
+  .topStrip nav ul.desktop:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    height: 0px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #1A1A1A;
+    z-index: 1
+  }
+
+  .topStrip nav ul.desktop li.home i,
+  .topStrip nav ul.desktop li.up i,
+  .topStrip nav ul.desktop li.trading i,
+  .topStrip nav ul.desktop li.search i,
+  .topStrip nav ul.desktop li.app i {
+    display: none
+  }
+
+  .topStrip nav ul.desktop li.onlyMobile {
+    display: block
+  }
+
+  .topStrip nav ul.desktop li.copyright {
+    color: #6E6E6E;
+    font: 14px/24px Noto Sans;
+  }
+
+  .middleAds {
+    margin-top: 2px;
+    padding: 0 0 0 12px;
+    display: none
+  }
+
+  .middleAds div,
+  .middleAdsM div {
+    margin: auto;
+  }
+
+  .middleAds .ads {
+    max-width: 100%;
+  }
+
+  .middleAdsM {
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  .insideContainer,
+  .middleContainer {
+    max-width: 100%;
+    display: block
+  }
+
+  .middleContainer {
+    margin-top: 0px
+  }
+
+  .lhsTbl {
+    width: 100%
+  }
+
+  .lhsTbl ul.navigation {
+    padding: 0 20px 0 20px
+  }
+
+  .lhsTbl ul.navigation li.active:before {
+    display: none
+  }
+
+  .lhsTbl ul.navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    background: #fff;
+    overflow-y: hidden;
+    overflow-x: scroll
+  }
+
+  .lhsTbl ul.navigation li {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    border-bottom: 5px solid #fff;
+    min-height: 48px;
+    margin-right: 16px;
+  }
+
+  .lhsTbl ul.navigation li.active {
+    border-bottom: 5px solid #DE372B
+  }
+
+  .lhsTbl ul.navigation li a {
+    display: block;
+    font-size: 1em;
+    padding: 12px 0 4px 40px
+  }
+
+  .lhsTbl ul.navigation li i {
+    border-color: #fff;
+    top: 12px;
+    left: 0
+  }
+
+  .lhsTbl ul.navigation li:last-child {
+    padding-right: 10px
+  }
+
+
+  .lftAds {
+    width: 100%;
+    background: #fff;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .lftAds img {
+    width: 250px;
+  }
+
+  .middleText {
+    margin: 15px auto;
+    padding: 0 5px 5px;
+    width: 96%;
+  }
+
+  .middleText .bigStory h1 {
+    text-align: left;
+    font-size: 1.12em;
+    line-height: 1.62em
+  }
+
+  .middleText .imgSize {
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 16px
+  }
+
+  .middleText .imgSize img {
+    max-width: 100%
+  }
+
+  .bigStory .content p {
+    font-size: 1em;
+    width: calc(100% - 50px)
+  }
+
+  .otherNews {
+    margin-top: 57px
+  }
+
+  body.articlepage {
+    padding-bottom: 40px
+  }
+
+  .articleWrap .flex {
+    display: block
+  }
+
+  .articleWrap .flex .socialicon {
+    margin: 16px 0;
+    width: inherit
+  }
+
+  .otherNews .list {
+    padding-bottom: 10px
+  }
+
+  .otherNews .list .lhs {
+    width: calc(100% - 100px)
+  }
+
+  .otherNews .list .rhs {
+    max-width: 100px
+  }
+
+  .otherNews .list .lhs p {
+    font-size: .94em;
+    line-height: 1.62em
+  }
+
+  .otherNews .list .rhs .img {
+    max-width: 100px;
+    max-height: 71px;
+    overflow: hidden
+  }
+
+  .otherNews .list .rhs .img img {
+    max-width: 100%
+  }
+
+  .otherNews .list .rhs .socialicon {
+    width: 100%
+  }
+
+  .otherNews .list .location {
+    position: relative;
+    bottom: auto
+  }
+
+  .rhsTbl,
+  .articlepage .lhsTbl {
+    display: none
+  }
+
+  .footer {
+    display: block
+  }
+
+  .footer ul {
+    display: flex;
+    max-height: 24px;
+    justify-content: space-between;
+    width: calc(100% - 66px);
+    margin: 24px auto 0;
+    align-items: center
+  }
+
+  .footer ul li {
+    opacity: 1;
+    margin-left: 0;
+    white-space: nowrap
+  }
+
+  .footer ul li a {
+    display: flex;
+    align-items: center;
+    font: 1.12em/1.5em Noto Sans;
+    color: #101833
+  }
+
+  .footer ul li i {
+    display: inline-block;
+    height: 26px;
+    border-bottom: 3px solid #fff;
+    margin: 0 10px 0 0
+  }
+
+  .footer ul li.active i {
+    border-bottom: 3px solid #ff5400
+  }
+
+  .footer ul li.home i {
+    background: url(https://static.tricitytoday.com/images/ic_homepage_header_home.svg) no-repeat -4px -1px;
+    width: 20px
+  }
+
+  .footer ul li.trading i {
+    width: 24px;
+    background: url(https://static.tricitytoday.com/images/ic_homepage_header_trending.svg) no-repeat -2px 0
+  }
+
+  .footer ul li.whats i {
+    width: 22px;
+    background: url(https://static.tricitytoday.com/images/ic_mobile_bottombar_whatsapp.svg) no-repeat 0 0
+  }
+
+  #overlay {
+    top: 51px;
+    height: calc(100% - 52px)
+  }
+
+  .searchBox {
+    top: 51px;
+  }
+
+  .articleWrap.factPage .factTxt ol {
+    margin: 15px 0 0 0px;
+  }
+
+  .articleWrap.factPage .factTxt ol li {
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+
+  .articleWrap.factPage .factTxt ol li:before {
+    top: -33px;
+    left: 7px;
+  }
+
+  .articleWrap.factPage.live .flex {
+    padding: 0
+  }
+
+  .advertiseText h1,
+  .termText h1 {
+    padding: 10px 0 30px;
+    font-size: 20px
+  }
+
+  .advertiseBox .content h4 {
+    font-size: 16px;
+    margin-bottom: 0
+  }
+
+  .advertiseBox .content p {
+    font-size: 14px
+  }
+
+  .advertiseText,
+  .advertiseText.contact {
+    max-width: 90%
+  }
+
+  .advertiseflex {
+    flex-wrap: wrap
+  }
+
+  .advertiseBox,
+  .advertiseText.contact .advertiseBox {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 40px
+  }
+
+  .termText h1 {
+    padding: 10px 0 15px
+  }
+
+  .termText {
+    font: normal 16px/28px Noto Sans
+  }
+
+  .termText .beforebox:before {
+    height: 16px;
+    top: 6px
+  }
+
+  .advertiseBox .content {
+    padding: 20px 20px 0
+  }
+
+  .hightlight {
+    max-width: 100%
+  }
+
+  .advertiseText .ribbon,
+  .hightlight .ribbon {
+    max-width: 190px;
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .hightlight li {
+    font: bold 18px/26px Noto Sans;
+  }
+
+}
+
+@media all and (max-width:1024px) and (min-width:769px) {
+  .middleText .imgSize img {
+    width: 100%
+  }
+
+  .middleText {
+    max-width: 455px
+  }
+
+
+}
